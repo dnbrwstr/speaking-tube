@@ -8,8 +8,13 @@
  */
 
 #import "AppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <TwitterKit/TwitterKit.h>
 
 #import "RCTRootView.h"
+
+#import <Fabric/Fabric.h>
+#import <TwitterKit/TwitterKit.h>
 
 @implementation AppDelegate
 
@@ -51,7 +56,10 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-  return YES;
+  
+  
+  [Fabric with:@[[Twitter class]]];
+  return YES;  
 }
 
 @end
